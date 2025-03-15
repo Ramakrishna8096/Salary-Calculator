@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Salary Calculator</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="salaryForm">
+                    <div class="form-group">
+                        <label for="job">Job:</label>
+                        <input type="text" class="form-control" id="job" placeholder="e.g., Web Developer">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="workHour">Hours per Day:</label>
+                            <input type="number" class="form-control" id="workHour" placeholder="e.g., 8">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="workWeek">Workdays per Week:</label>
+                            <input type="number" class="form-control" id="workWeek" placeholder="e.g., 5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="netSalary">Gross Monthly Salary ($):</label>
+                        <input type="number" class="form-control" id="netSalary" placeholder="Enter gross salary">
+                    </div>
+                    <div class="form-group">
+                        <label for="tax">Tax Percentage (%):</label>
+                        <input type="number" class="form-control" id="tax" placeholder="e.g., 20">
+                    </div>
+                    <div class="form-group">
+                        <label for="overtimeHours">Overtime Hours per Week:</label>
+                        <input type="number" class="form-control" id="overtimeHours" placeholder="e.g., 5">
+                    </div>
+                    <div class="form-group">
+                        <label for="overtimeRate">Overtime Rate per Hour ($):</label>
+                        <input type="number" class="form-control" id="overtimeRate" placeholder="e.g., 15">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" id="calculateButton">Calculate Salary</button>
+                    <button type="reset" class="btn btn-secondary btn-block" id="clearButton">Clear</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div id="results">
+                    <h4 class="text-center mb-3" id="title">Salary Overview for <span id="jobTitle">______</span>:</h4>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Hourly Salary:</th>
+                                <td id="hourly">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Daily Salary:</th>
+                                <td id="daily">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Monthly Gross Salary:</th>
+                                <td id="monthlyGross">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Tax Deduction:</th>
+                                <td id="taxDeduction">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Monthly Net Salary:</th>
+                                <td id="monthlyNet">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Yearly Net Salary:</th>
+                                <td id="yearly">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Total Overtime Earnings:</th>
+                                <td id="overtimeEarnings">$0</td>
+                            </tr>
+                            <tr>
+                                <th>Total Earnings (Including Overtime):</th>
+                                <td id="totalEarnings">$0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
